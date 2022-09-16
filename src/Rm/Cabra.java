@@ -27,21 +27,21 @@ public class Cabra {
 				String fecha = input.next();
 				String raza = input.next();
 				byte edad = input.nextByte();
-				short año = input.nextShort();
+				short aÃ±o = input.nextShort();
 				byte ms = input.nextByte();
-				lista[limite++] = new Cabras(cdr, cdp, fecha, raza, edad, año, ms);
+				lista[limite++] = new Cabras(cdr, cdp, fecha, raza, edad, aÃ±o, ms);
 			}
 
 			input.close();	
 	    }
-
+		// Producto de leche por mes
 		public int getCdpm() {
 			int producto = 0;
 			for(int i=0; i<limite; i++)
 				producto+=lista[i].getCdp();
 			return producto;
 		}
-
+		// Producto de leche maximos
 		public float getMxP() {
 			float mProd = 0;
 			for(int i=0;i<limite;i++)
@@ -49,7 +49,7 @@ public class Cabra {
 					mProd = lista[i].getCdp();
 			return mProd;
 		}
-
+		// Cabras con mayor produccion de leche
 		public void imprimeMxC() {
 			float mProdcuto = getMxP();
 			System.out.print("Estas cabras producen la mayor cantidad de leche: \n");
@@ -67,7 +67,7 @@ public class Cabra {
 	    		System.out.print("\t"+lista[i].getFecha());
 	    		System.out.print("\t"+lista[i].getRaza());
 	    		System.out.print("\t"+lista[i].getEdad());
-	    		System.out.print("\t"+lista[i].getAño());
+	    		System.out.print("\t"+lista[i].getAÃ±o());
 	    		System.out.print("\t"+lista[i].getMs()+"\n");
 	    	}
 	    }
